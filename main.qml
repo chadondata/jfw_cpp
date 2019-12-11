@@ -60,7 +60,23 @@ ApplicationWindow {
                 width: parent.width
                 onClicked: {
                     stackView.push("EditorForm.ui.qml")
+                    console.info(stackView.children[1].title)
                     drawer.close()
+                }
+            }
+
+            ItemDelegate {
+                text: qsTr("Go fullscreen")
+                width: parent.width
+                onClicked: {
+                    window.showFullScreen()
+                }
+            }
+            ItemDelegate {
+                text: qsTr("Just f*cking quit")
+                width: parent.width
+                onClicked: {
+                    window.close()
                 }
             }
 
